@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICODES | Instituto de Comunicación y Desarrollo Social</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #ffffff;
+      color: #1f2d3d;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #003366;
+      color: #ffffff;
+      padding: 30px 60px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    nav {
+      margin-top: 15px;
+    }
+    nav a {
+      color: #ffffff;
+      margin-right: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 60px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #003366;
+      border-left: 5px solid #003366;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background-color: #f4f7fb;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .testimonial {
+      font-style: italic;
+      border-left: 3px solid #003366;
+      padding-left: 15px;
+      margin-bottom: 15px;
+    }
+    footer {
+      background-color: #003366;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+    a.button {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #003366;
+      color: #ffffff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    a.button:hover {
+      background-color: #0059b3;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    form button {
+      background-color: #003366;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    form button:hover {
+      background-color: #0059b3;
+    }
+
+    /* Asistente virtual */
+    #assistant-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #003366;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    }
+    #assistant-toggle img {
+      width: 100%;
+      border-radius: 50%;
+    }
+    #chatbot {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      width: 320px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    #chatbot-header {
+      background-color: #003366;
+      color: #ffffff;
+      padding: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+    #chatbot-messages {
+      padding: 15px;
+      height: 220px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+    #chatbot-input {
+      display: flex;
+      border-top: 1px solid #cccccc;
+    }
+    #chatbot-input input {
+      flex: 1;
+      border: none;
+      padding: 12px;
+      font-size: 14px;
+    }
+    #chatbot-input button {
+      background-color: #003366;
+      color: #ffffff;
+      border: none;
+      padding: 12px 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Instituto de Comunicación y Desarrollo Social</h1>
+  <p>Formación, investigación y comunicación estratégica para el desarrollo social</p>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#programas">Programas</a>
+    <a href="#noticias">Noticias</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section id="inicio">
+  <h2>Bienvenidos a ICODES</h2>
+  <p>
+    ICODES es una institución dedicada a la formación académica, investigación aplicada y proyección social en comunicación, ética y desarrollo social.
+  </p>
+</section>
+
+<section id="nosotros">
+  <h2>Identidad institucional</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Misión</h3>
+      <p>Formar profesionales críticos y éticos en comunicación social y estratégica, comprometidos con el desarrollo social.</p>
+    </div>
+    <div class="card">
+      <h3>Visión</h3>
+      <p>Ser referente nacional en formación e investigación en comunicación, reconocidos por la excelencia académica y el impacto social.</p>
+    </div>
+    <div class="card">
+      <h3>Valores</h3>
+      <ul>
+        <li>Ética profesional</li>
+        <li>Compromiso social</li>
+        <li>Responsabilidad</li>
+        <li>Innovación</li>
+        <li>Respeto y pluralismo</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="programas">
+  <h2>Programas Académicos</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Comunicación Social</h3>
+      <p>Carrera profesional que forma comunicadores capaces de intervenir en medios y organizaciones.</p>
+      <a class="button" href="#">Más información</a>
+    </div>
+    <div class="card">
+      <h3>Marketing y Redes Sociales</h3>
+      <p>Diplomado especializado en estrategias digitales y gestión de comunidades en línea.</p>
+      <a class="button" href="#">Más información</a>
+    </div>
+    <div class="card">
+      <h3>Periodismo Digital</h3>
+      <p>Formación práctica en redacción, producción de contenidos y herramientas multimedia.</p>
+      <a class="button" href="#">Más información</a>
+    </div>
+  </div>
+</section>
+
+<section id="noticias">
+  <h2>Noticias y Blog</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Seminario Internacional 2025</h3>
+      <p>El instituto organizó un seminario sobre comunicación estratégica y participación ciudadana.</p>
+      <a class="button" href="#">Leer más</a>
+    </div>
+    <div class="card">
+      <h3>Proyecto Comunitario en Arequipa</h3>
+      <p>Estudiantes participaron en un proyecto de comunicación social con impacto local.</p>
+      <a class="button" href="#">Leer más</a>
+    </div>
+  </div>
+</section>
+
+<section id="eventos">
+  <h2>Eventos</h2>
+  <ul>
+    <li>10 Febrero 2026 - Taller de Redacción Digital</li>
+    <li>22 Marzo 2026 - Conferencia: Comunicación Estratégica y Sociedad</li>
+    <li>15 Abril 2026 - Seminario de Marketing Digital</li>
+  </ul>
+</section>
+
+<section id="testimonios">
+  <h2>Testimonios</h2>
+  <div class="testimonial">“ICODES me brindó las herramientas para desarrollarme como comunicador profesional. – Juan Pérez”</div>
+  <div class="testimonial">“La formación en redes sociales me permitió gestionar proyectos reales en la universidad. – María López”</div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <form>
+    <input type="text" placeholder="Nombre" required>
+    <input type="email" placeholder="Correo" required>
+    <textarea placeholder="Mensaje" rows="4" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+  <p>Teléfono: (01) 456-7890 | WhatsApp: +51 987 654 321 | Correo: informes@icodes.edu.pe</p>
+</section>
+
+<footer>
+  <p>©️ 2025 ICODES – Instituto de Comunicación y Desarrollo Social</p>
+</footer>
+
+<!-- Botón del asistente con avatar animado -->
+<button id="assistant-toggle" onclick="toggleChatbot()" title="Asistente virtual ICODES">
+  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Asistente virtual" />
+</button>
+
+<!-- Asistente virtual -->
+<div id="chatbot">
+  <div id="chatbot-header">Asistente Virtual ICODES</div>
+  <div id="chatbot-messages">
+    <p><strong>Asistente:</strong> Hola 👋, soy el asistente virtual de ICODES. Puedo ayudarte con programas, noticias, eventos o contacto.</p>
+  </div>
+  <div id="chatbot-input">
+    <input type="text" id="userInput" placeholder="Escribe tu consulta..." />
+    <button onclick="sendMessage()">Enviar</button>
+  </div>
+</div>
+
+<script>
+  function toggleChatbot() {
+    const bot = document.getElementById('chatbot');
+    bot.style.display = bot.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  function sendMessage() {
+    const input = document.getElementById('userInput');
+    const message = input.value.trim();
+    if (!message) return;
+
+    const messages = document.getElementById('chatbot-messages');
+    messages.innerHTML += `<p><strong>Tú:</strong> ${message}</p>`;
+
+    let response = 'Gracias por escribirnos. Un asesor institucional se comunicará contigo.';
+    const text = message.toLowerCase();
+
+    if (text.includes('programa')) response = 'Contamos con programas en Comunicación Social, Periodismo Digital y Marketing en Redes Sociales.';
+    else if (text.includes('noticia')) response = 'Puedes consultar nuestras noticias y blog en la sección "Noticias".';
+    else if (text.includes('evento')) response = 'Revisa nuestra sección "Eventos" para conocer próximos talleres y seminarios.';
+    else if (text.includes('contacto') || text.includes('telefono')) response = 'Puedes contactarnos al (01) 456-7890 o escribir a informes@icodes.edu.pe.';
+
+    messages.innerHTML += `<p><strong>Asistente:</strong> ${response}</p>`;
+    input.value = '';
+    messages.scrollTop = messages.scrollHeight;
+  }
+</script>
+
+</body>
+</html>
